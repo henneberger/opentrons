@@ -105,7 +105,6 @@ change-left:
 		-d '{"axes": ["b"]}' \
 		http://$(host):31950/motors/disengage
 
-# TODO(mc, 2018-03-14): use $(host) var
 .PHONY: term
 term:
-	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@$(host)
+	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@\[fd00:0:cafe:fefe::1\]
